@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Swar Sawalkar</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">SWAR SAWALKAR</div>
+  <button id="menu-btn" class="menu-btn" aria-label="Toggle menu">☰</button>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="experience.html">Experience</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+<section class="section">
+  <h2>Contact Me</h2>
+
+  <!-- Contact Form (Formspree) -->
+  <form id="contact-form" action="https://formspree.io/f/meoydrpz" method="POST">
+    <!-- Honeypot field to reduce spam -->
+    <input type="text" name="_gotcha" id="_gotcha" style="display:none" autocomplete="off">
+    <input id="name" name="name" type="text" placeholder="Your Name" required>
+    <input id="email" name="email" type="email" placeholder="Email Address" required>
+    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+    <input type="hidden" name="_subject" value="New contact form submission">
+    <button type="submit">Send Message</button>
+  </form>
+
+  <p id="form-status" style="margin-top: 12px; font-weight: 600;"></p>
+
+  <h3>Direct Contact</h3>
+  <div class="contact-details">
+    <p>
+      <strong>📍 Address:</strong><br>
+      Ghodbunder Road,<br>
+      Thane (W)
+    </p>
+    <p>
+      <strong>📧 Email:</strong><br>
+      <a href="mailto:sawalkarswar@gmail.com">sawalkarswar@gmail.com</a><br>
+      <a href="mailto:swarjsawalkar@gmail.com">swarjsawalkar@gmail.com</a>
+    </p>
+    <p>
+      <strong>📞 Phone:</strong><br>
+      <a href="tel:+919167923822">+91 91679 23822</a>, 
+      <a href="tel:+919326048003">+91 93260 48003</a>
+    </p>
+  </div>
+
+  <h3>Connect with Me</h3>
+  <div class="social-links">
+    <a href="https://www.youtube.com/@swarsawalkar6283" target="_blank" rel="noopener">
+      <i class="fab fa-youtube"></i> <span>YouTube</span>
+    </a>
+    <a href="https://www.instagram.com/swar_sawalkar" target="_blank" rel="noopener">
+      <i class="fab fa-instagram"></i> <span>Instagram (swar_sawalkar)</span>
+    </a>
+    <a href="https://www.instagram.com/sawalkarswar" target="_blank" rel="noopener">
+      <i class="fab fa-instagram"></i> <span>Instagram (sawalkarswar)</span>
+    </a>
+    <a href="https://www.linkedin.com/in/swar-sawalkar-a7962a33a/" target="_blank" rel="noopener">
+      <i class="fab fa-linkedin"></i> <span>LinkedIn</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  © 2025 Swar Sawalkar — Portfolio
+</footer>
+
+<!-- JS -->
+<script src="script.js"></script>
+</body>
+</html>
