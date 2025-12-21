@@ -220,6 +220,7 @@ footer {
   margin: 0 auto 8px;
 }
 
+
 // About hero /* ABOUT HERO */
 /* ================= ABOUT HERO ================= */
 
@@ -229,7 +230,7 @@ footer {
   flex-direction: column;
   justify-content: center;         /* center vertically */
   align-items: center;             /* center horizontally */
-  padding: 0 8%;
+  padding: 140px 8%;
   text-align: center;
   background: linear-gradient(
     rgba(2, 6, 23, 0.95),
@@ -247,6 +248,7 @@ footer {
 
 .about-hero p {
   max-width: 820px;
+  margin : 0 auto;
   font-size: 18px;
   line-height: 1.8;
   color: #cbd5f5;
@@ -256,8 +258,7 @@ footer {
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .about-hero {
-    min-height: 60vh;
-    padding: 0 6%;
+    padding: 100px 6%;
   }
 
   .about-hero h1 {
@@ -269,20 +270,7 @@ footer {
   }
 }
 
-/* MOBILE RESPONSIVE */
-@media (max-width: 768px) {
-  .about-hero {
-    padding: 100px 6% 60px;
-  }
 
-  .about-hero h1 {
-    font-size: 34px;
-  }
-
-  .about-hero p {
-    font-size: 16px;
-  }
-}
 
 /* SECTION STYLES */
 .section {
