@@ -211,10 +211,9 @@ footer {
   margin: 0 auto 8px;
 }
 
-
 // About hero /* ABOUT HERO */
 /* ================= ABOUT HERO ================= */
-
+/* ================= ABOUT HERO ================= */
 .about-hero {
   padding: 110px 10% 70px;   /* SAME as experience */
   text-align: center;
@@ -225,10 +224,10 @@ footer {
 }
 
 .about-hero h1 {
- font-size: 42px;          /* SAME as experience */
+  font-size: 42px;          /* SAME as experience */
   color: #38bdf8;
   margin-bottom: 15px;
-  }
+}
 
 .about-hero p {
   max-width: 750px;         /* SAME as experience */
@@ -236,7 +235,6 @@ footer {
   font-size: 17px;
   color: #cbd5f5;
 }
-
 
 .about-hero p span:first-child {
   opacity: 0.9;
@@ -272,7 +270,7 @@ footer {
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .about-hero {
-    padding: 100px 6%;
+    padding: 120px 6% 60px;
   }
 
   .about-hero h1 {
