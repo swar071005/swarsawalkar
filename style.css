@@ -1,3 +1,19 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/* GLOBAL MOBILE SAFETY */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
 
   
   * {
@@ -8,6 +24,7 @@ html, body {
   width: 100%;
   overflow-x: hidden;
 }
+
 
 @media (max-width: 768px) {
 
