@@ -266,6 +266,28 @@ footer {
   padding-top: 80px; /* pushes hero below navbar */
 }
 
+/* // profile image in about hero // */
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 18px; /* THIS controls the space-space */
+}
+
+.header-profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #caa44d;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #38bdf8;
+  
+}
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
