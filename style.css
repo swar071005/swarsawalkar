@@ -201,18 +201,9 @@ footer {
   text-align: center;
 }
 
-.section {
-  text-align: center;
-}
-
 .section p {
   max-width: 800px;
   margin: 0 auto 14px;
-}
-
-.section ul {
-  list-style-position: inside;
-  padding-left: 0;
 }
 
 .section li {
@@ -225,35 +216,58 @@ footer {
 /* ================= ABOUT HERO ================= */
 
 .about-hero {
-  min-height: 70vh;                /* vertical centering */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;         /* center vertically */
-  align-items: center;             /* center horizontally */
-  padding: 140px 8%;
+  padding: 110px 10% 70px;   /* SAME as experience */
   text-align: center;
   background: linear-gradient(
-    rgba(2, 6, 23, 0.95),
-    rgba(2, 6, 23, 0.95)
+    rgba(2, 6, 23, 0.92),
+    rgba(2, 6, 23, 0.92)
   );
 }
 
 .about-hero h1 {
-  font-size: 46px;
-  font-weight: 700;
+ font-size: 42px;          /* SAME as experience */
   color: #38bdf8;
-  margin-bottom: 18px;
-  letter-spacing: 1px;
+  margin-bottom: 15px;
+  }
+
+.about-hero p {
+  max-width: 750px;         /* SAME as experience */
+  margin: auto;
+  font-size: 17px;
+  color: #cbd5f5;
+}
+
+
+.about-hero p span:first-child {
+  opacity: 0.9;
+}
+
+.about-hero p span:last-child {
+  font-style: italic;
+  opacity: 0.85;
 }
 
 .about-hero p {
-  max-width: 820px;
-  margin : 0 auto;
-  font-size: 18px;
-  line-height: 1.8;
-  color: #cbd5f5;
-  font-style: italic;
+  text-align: center;
 }
+
+.about-hero p span {
+  display: block;
+}
+
+
+/* FORCE ABOUT HERO HEADING CENTER */
+.about-hero h1,
+.about-hero h2 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-hero {
+  padding-top: 80px; /* pushes hero below navbar */
+}
+
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
