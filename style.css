@@ -941,3 +941,50 @@ footer {
   border-radius: 50%;
   padding: 12px 16px;
 }
+
+
+
+
+
+
+
+/* =========================
+   MOBILE RESPONSIVE STYLES
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* Header */
+  header {
+    padding: 12px 16px;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+
+  /* Page hero (used on ALL pages) */
+  .page-hero h1 {
+    font-size: 32px;
+  }
+
+  .page-hero p {
+    font-size: 16px;
+  }
+
+  /* Index page hero */
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  /* Contact page */
+  .contact-form {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  /* Navigation */
+  nav {
+    flex-direction: column;
+  }
+}
