@@ -1069,3 +1069,8 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  .section {
+    padding: 50px 16px;
+  }
+}
