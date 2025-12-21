@@ -1,4 +1,15 @@
+
+  
   * {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -986,5 +997,25 @@ footer {
   /* Navigation */
   nav {
     flex-direction: column;
+  }
+}
+
+/* FIX INDEX MOBILE VIEW */
+@media (max-width: 768px) {
+
+  .hero,
+  .page-hero {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    max-width: 100%;
   }
 }
