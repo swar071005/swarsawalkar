@@ -1,3 +1,17 @@
+/* GLOBAL MOBILE SAFETY */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -1032,22 +1046,26 @@ footer {
   }
 }
 
-/* FIX INDEX MOBILE VIEW */
+/* INDEX PAGE MOBILE FIX */
 @media (max-width: 768px) {
 
-  .hero,
-  .page-hero {
+  .hero {
+    min-height: auto;
     width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
+    max-width: 100%;
+    padding: 100px 16px 60px; /* IMPORTANT */
+    overflow-x: hidden;
   }
 
   .hero h1 {
     font-size: 32px;
     line-height: 1.2;
+    word-break: break-word;
   }
 
   .hero p {
     max-width: 100%;
+    font-size: 16px;
   }
 }
+
