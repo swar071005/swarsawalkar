@@ -1,14 +1,14 @@
-// ------------------------------
-// MOBILE NAVIGATION
-// ------------------------------
-const navLinks = document.querySelector("nav");
-const menuBtn = document.querySelector("#menu-btn");
+// // ------------------------------
+// // MOBILE NAVIGATION
+// // ------------------------------
+// const navLinks = document.querySelector("nav");
+// const menuBtn = document.querySelector("#menu-btn");
 
-if (menuBtn) {
-  menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-}
+// if (menuBtn) {
+//   menuBtn.addEventListener("click", () => {
+//     navLinks.classList.toggle("active");
+//   });
+// }
 
 // ------------------------------
 // CONTACT FORM (Formspree)
