@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Close menu after clicking a link (mobile UX)
   document.querySelectorAll("#nav-menu a").forEach(link => {
     link.addEventListener("click", () => {
       navMenu.classList.remove("active");
