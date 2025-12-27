@@ -975,15 +975,13 @@ footer {
 
 /*Mobile*/
 @media (max-width: 768px) {
-  .gallery.videos {
-    grid-template-columns: 1fr; /* stack videos vertically */
-    gap: 20px;                  /* reduce spacing */
+  .video-container {
+    max-width: 90%;   /* almost full width on mobile */
+    border-radius: 14px;
   }
 
-  .video-card img,
   .video-container iframe {
-    height: auto;               /* allow height to adjust */
-    border-radius: 16px;        /* keep curved edges */
+    border-radius: 14px;
   }
 }
 
