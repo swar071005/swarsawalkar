@@ -973,17 +973,6 @@ footer {
 
 
 
-/*Mobile*/
-@media (max-width: 768px) {
-  .video-container {
-    max-width: 90%;   /* almost full width on mobile */
-    border-radius: 14px;
-  }
-
-  .video-container iframe {
-    border-radius: 14px;
-  }
-}
 
 
 
