@@ -1005,75 +1005,42 @@ footer {
 
 
 
-/* =========================
-   MOBILE RESPONSIVE STYLES
-   ========================= */
-
+/* ===============================
+   FINAL MOBILE MENU FIX
+   =============================== */
 @media (max-width: 768px) {
 
-  /* Header */
   header {
-    padding: 12px 16px;
+    flex-direction: row !important;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
   }
 
-  .logo-text {
-    font-size: 18px;
-  }
-
-  /* Page hero (used on ALL pages) */
-  .page-hero h1 {
-    font-size: 32px;
-  }
-
-  .page-hero p {
-    font-size: 16px;
-  }
-
-  /* Index page hero */
-  .hero h1 {
-    font-size: 34px;
-  }
-
-  /* Contact page */
-  .contact-form {
-    width: 100%;
-    padding: 0 16px;
-  }
-
-  /* Navigation */
-  nav {
+  #nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #020617;
+    display: none;
     flex-direction: column;
+    padding: 20px 0;
+  }
+
+  #nav-menu.active {
+    display: flex;
+  }
+
+  #nav-menu a {
+    padding: 14px 24px;
+    margin: 0;
+  }
+
+  .menu-btn {
+    display: block;
   }
 }
-
-/* INDEX PAGE MOBILE FIX */
-@media (max-width: 768px) {
-
-  .hero {
-    min-height: auto;
-    width: 100%;
-    max-width: 100%;
-    padding: 100px 16px 60px; /* IMPORTANT */
-    overflow-x: hidden;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-    line-height: 1.2;
-    word-break: break-word;
-  }
-
-  .hero p {
-    max-width: 100%;
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .section {
-    padding: 50px 16px;
-  }
-} 
 
 
 /* ===============================
