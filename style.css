@@ -953,11 +953,11 @@ footer {
 .video-container {
   position: relative;
   width: 100%;
-  max-width: 400px; /* smaller width */
-  padding-bottom: 56.25%; /* keeps 16:9 aspect ratio */
+  max-width: 600px; /* limits the width */
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
   height: 0;
   overflow: hidden;
-  margin: 0 auto; /* centers video */
+  margin: 0 auto; /* centers it */
   border-radius: 16px; /* curved edges */
   box-shadow: 0 0 20px rgba(56, 189, 248, 0.2); /* optional shadow */
 }
