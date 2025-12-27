@@ -975,29 +975,15 @@ footer {
 
 /*Mobile*/
 @media (max-width: 768px) {
-
-  /* Video gallery grid */
   .gallery.videos {
-    grid-template-columns: 1fr; /* one video per row */
-    gap: 20px;
-    padding: 0 6%;
+    grid-template-columns: 1fr; /* stack videos vertically */
+    gap: 20px;                  /* reduce spacing */
   }
 
-  /* Video container */
-  .video-container {
-    max-width: 90%;      /* wider on mobile */
-    margin: 0 auto 25px;
-    border-radius: 14px;
-  }
-
-  /* Video iframe */
+  .video-card img,
   .video-container iframe {
-    border-radius: 14px;
-  }
-
-  /* Video title text */
-  .video-card p {
-    font-size: 14px;
+    height: auto;               /* allow height to adjust */
+    border-radius: 16px;        /* keep curved edges */
   }
 }
 
