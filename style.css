@@ -1139,25 +1139,6 @@ footer {
   }
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .site-footer {
-    padding: 18px 0;      /* remove horizontal padding */
-  }
-
-  .site-footer .footer-copy {
-    font-size: 15px;
-  }
-
-  .site-footer .footer-desc {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-
-  .site-footer::before {
-    width: 100vw;         /* still full width on mobile */
-  }
-}
 
 //Header //
 header {
