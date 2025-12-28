@@ -1078,3 +1078,41 @@ footer {
 .float-card {
   animation: floatUpDown 4s ease-in-out infinite;
 }
+
+
+/* SIMPLE FOOTER STYLING */
+.site-footer {
+  background-color: #020617; /* Dark background */
+  color: #e5e7eb;            /* Light text */
+  padding: 20px 10px;         /* Spacing */
+  text-align: center;          /* Center the text */
+  font-family: 'Poppins', sans-serif;
+  border-top: 2px solid #38bdf8; /* Optional top border for style */
+}
+
+.site-footer .footer-copy {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.site-footer .footer-desc {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 15px 10px;
+  }
+
+  .site-footer .footer-copy {
+    font-size: 15px;
+  }
+
+  .site-footer .footer-desc {
+    font-size: 13px;
+  }
+}
