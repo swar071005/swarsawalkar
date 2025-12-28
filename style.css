@@ -1082,14 +1082,26 @@ footer {
 
 /* SIMPLE FOOTER STYLING */
 .site-footer {
-  background-color: #020617; /* Dark background */
-  color: #e5e7eb;            /* Light text */
-  padding: 20px 10px;         /* Spacing */
-  text-align: center;          /* Center the text */
+  position: relative;
+  background-color: #020617;
+  color: #e5e7eb;
+  padding: 24px 10px;
+  text-align: center;
   font-family: 'Poppins', sans-serif;
-  border-top: 2px solid #38bdf8; /* Optional top border for style */
 }
 
+/* FULL-WIDTH BLUE LINE */
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 2px;
+  background: #38bdf8;
+}
+
+/* TEXT */
 .site-footer .footer-copy {
   font-weight: 600;
   font-size: 16px;
@@ -1102,10 +1114,10 @@ footer {
   line-height: 1.6;
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 @media (max-width: 768px) {
   .site-footer {
-    padding: 15px 10px;
+    padding: 18px 10px;
   }
 
   .site-footer .footer-copy {
