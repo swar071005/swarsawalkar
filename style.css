@@ -1128,3 +1128,10 @@ header {
   border-bottom: 2px solid #38bdf8;   /* light blue line */
   box-shadow: 0 4px 12px rgba(56, 189, 248, 0.18); /* glow */
 }
+
+
+/* Header bottom blue line – force apply */
+header {
+  border-bottom: 2px solid #38bdf8 !important;
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25) !important;
+}
