@@ -1135,3 +1135,101 @@ header {
   border-bottom: 2px solid #38bdf8 !important;
   box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25) !important;
 }
+
+
+/* =========================
+   MOBILE OPTIMIZATION
+   ========================= */
+@media (max-width: 768px) {
+
+  /* Global text */
+  body {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  section {
+    padding: 40px 6%;
+  }
+
+  h1 { font-size: 32px; }
+  h2 { font-size: 26px; }
+  h3 { font-size: 20px; }
+  p  { font-size: 15px; }
+
+  /* Header */
+  header {
+    padding: 14px 6%;
+  }
+
+  .logo-text {
+    font-size: 16px;
+  }
+
+  nav {
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    padding: 14px 0;
+    font-size: 16px;
+  }
+
+  /* Hero section */
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .hero-image img {
+    width: 180px;
+    height: auto;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  /* Video */
+  .video-container {
+    max-width: 90%;
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 14px 22px;
+    font-size: 15px;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 30px 6%;
+    text-align: center;
+  }
+
+  .footer-copy {
+    font-size: 14px;
+  }
+
+  .footer-desc {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
