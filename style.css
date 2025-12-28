@@ -1079,8 +1079,7 @@ footer {
   animation: floatUpDown 4s ease-in-out infinite;
 }
 
-
-/* SIMPLE FOOTER STYLING */
+//Footer//
 .site-footer {
   position: relative;
   background-color: #020617;
@@ -1090,19 +1089,16 @@ footer {
   font-family: 'Poppins', sans-serif;
 }
 
-/* FULL-WIDTH BLUE LINE */
 .site-footer::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
+  left: 0;
+  right: 0;
   height: 2px;
   background: #38bdf8;
 }
 
-/* TEXT */
 .site-footer .footer-copy {
   font-weight: 600;
   font-size: 16px;
@@ -1129,6 +1125,7 @@ footer {
     font-size: 13px;
   }
 }
+
 
 //Header //
 header {
