@@ -1391,3 +1391,10 @@ button:focus {
   outline: 2px solid #38bdf8;
   outline-offset: 3px;
 }
+
+//Tapping //
+@media (max-width: 768px) {
+  nav a {
+    padding: 16px 20px;
+  }
+}
