@@ -49,16 +49,27 @@
 <section class="section">
   <h2>Contact Me</h2>
 
-  <!-- Contact Form (Formspree) -->
-  <form id="contact-form" action="https://formspree.io/f/meoydrpz" method="POST">
-    <!-- Honeypot field to reduce spam -->
-    <input type="text" name="_gotcha" id="_gotcha" style="display:none" autocomplete="off">
-    <input id="name" name="name" type="text" placeholder="Your Name" required>
-    <input id="email" name="email" type="email" placeholder="Email Address" required>
-    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-    <input type="hidden" name="_subject" value="New contact form submission">
-    <button type="submit">Send Message</button>
-  </form>
+
+<!-- Contact Form (Formspree) -->
+<form id="contact-form" action="https://formspree.io/f/meoydrpz" method="POST">
+
+  <!-- Honeypot field to reduce spam -->
+  <input type="text" name="_gotcha" id="_gotcha" style="display:none" autocomplete="off">
+
+  <!-- Hidden timestamp -->
+  <input type="hidden" name="submitted_at" id="submitted_at">
+
+  <input id="name" name="name" type="text" placeholder="Your Name" required>
+  <input id="email" name="email" type="email" placeholder="Email Address" required>
+  <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
+  <input type="hidden" name="_subject" value="New contact form submission">
+
+  <button type="submit">Send Message</button>
+</form>
+
+<p id="form-status" style="margin-top: 12px; font-weight: 600;"></p>
+
 
   <p id="form-status" style="margin-top: 12px; font-weight: 600;"></p>
 
