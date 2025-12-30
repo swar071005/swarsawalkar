@@ -72,7 +72,13 @@
     btn.disabled = false;
   });
 
+const form = document.getElementById('contact-form');
+  form.addEventListener('submit', () => { gtag('event', 'contact_form_submission'); });
 
+  gtag('event', 'contact_form_submission', {
+  page_location: window.location.href,
+  form_name: 'main_contact_form'
+});
 
 </script>
   
@@ -129,6 +135,8 @@
 
   <input type="hidden" name="_subject" value="New contact form submission">
 <button type="submit" id="submit-btn">Send Message</button>
+
+
 
 </form>
 
