@@ -11,6 +11,20 @@
   gtag('js', new Date());
 
   gtag('config', 'G-8SM5QPL5LF');
+
+ 
+  document.addEventListener("DOMContentLoaded", function () {
+    const now = new Date();
+
+    const formattedTime = now.toLocaleString("en-IN", {
+      dateStyle: "full",
+      timeStyle: "medium"
+    });
+
+    document.getElementById("submitted_at").value = formattedTime;
+  });
+
+
 </script>
   
   <title>Contact | Swar Sawalkar</title>
