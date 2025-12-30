@@ -80,6 +80,22 @@ const form = document.getElementById('contact-form');
   form_name: 'main_contact_form'
 });
 
+  
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contact-form');
+
+    if (!form) return;
+
+    form.addEventListener('submit', function () {
+      if (typeof gtag === 'function') {
+        gtag('event', 'contact_form_submission', {
+          page_location: window.location.href,
+          form_name: 'main_contact_form'
+        });
+      }
+    });
+  });
+
 </script>
   
   <title>Contact | Swar Sawalkar</title>
