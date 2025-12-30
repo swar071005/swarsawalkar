@@ -25,6 +25,55 @@
   });
 
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const now = new Date();
+
+    // Local time (India-friendly but works globally)
+    const formattedTime = now.toLocaleString(undefined, {
+      dateStyle: "full",
+      timeStyle: "medium"
+    });
+
+    // User timezone
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+    document.getElementById("submitted_at").value = formattedTime;
+    document.getElementById("user_timezone").value = timezone;
+  });
+
+
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+  const btn = document.getElementById("submit-btn");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.innerText = "Sending...";
+
+    const data = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: { "Accept": "application/json" }
+    });
+
+    if (response.ok) {
+      status.innerText = "✅ Thank you! Your message has been sent successfully.";
+      status.style.color = "#22c55e";
+      form.reset();
+    } else {
+      status.innerText = "❌ Oops! Something went wrong. Please try again.";
+      status.style.color = "#ef4444";
+    }
+
+    btn.innerText = "Send Message";
+    btn.disabled = false;
+  });
+
+
+
 </script>
   
   <title>Contact | Swar Sawalkar</title>
@@ -67,6 +116,7 @@
 <!-- Contact Form (Formspree) -->
 <form id="contact-form" action="https://formspree.io/f/meoydrpz" method="POST">
 
+
   <!-- Honeypot field to reduce spam -->
   <input type="text" name="_gotcha" id="_gotcha" style="display:none" autocomplete="off">
 
@@ -78,14 +128,13 @@
   <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
 
   <input type="hidden" name="_subject" value="New contact form submission">
+<button type="submit" id="submit-btn">Send Message</button>
 
-  <button type="submit">Send Message</button>
 </form>
 
 <p id="form-status" style="margin-top: 12px; font-weight: 600;"></p>
 
 
-  <p id="form-status" style="margin-top: 12px; font-weight: 600;"></p>
 
   <h3>Direct Contact</h3>
   <div class="contact-details">
