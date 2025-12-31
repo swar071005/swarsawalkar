@@ -3,111 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8SM5QPL5LF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-8SM5QPL5LF');
-
- 
-  document.addEventListener("DOMContentLoaded", function () {
-    const now = new Date();
-
-    const formattedTime = now.toLocaleString("en-IN", {
-      dateStyle: "full",
-      timeStyle: "medium"
-    });
-
-    document.getElementById("submitted_at").value = formattedTime;
-  });
-
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const now = new Date();
-
-    // Local time (India-friendly but works globally)
-    const formattedTime = now.toLocaleString(undefined, {
-      dateStyle: "full",
-      timeStyle: "medium"
-    });
-
-    // User timezone
-    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-
-    document.getElementById("submitted_at").value = formattedTime;
-    document.getElementById("user_timezone").value = timezone;
-  });
-
-
-  const form = document.getElementById("contact-form");
-  const status = document.getElementById("form-status");
-  const btn = document.getElementById("submit-btn");
-
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
-    btn.disabled = true;
-    btn.innerText = "Sending...";
-
-    const data = new FormData(form);
-
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: data,
-      headers: { "Accept": "application/json" }
-    });
-
-    if (response.ok) {
-      status.innerText = "✅ Thank you! Your message has been sent successfully.";
-      status.style.color = "#22c55e";
-      form.reset();
-    } else {
-      status.innerText = "❌ Oops! Something went wrong. Please try again.";
-      status.style.color = "#ef4444";
-    }
-
-    btn.innerText = "Send Message";
-    btn.disabled = false;
-  });
-
-const form = document.getElementById('contact-form');
-  form.addEventListener('submit', () => { gtag('event', 'contact_form_submission'); });
-
-  gtag('event', 'contact_form_submission', {
-  page_location: window.location.href,
-  form_name: 'main_contact_form'
-});
-
-  
-  document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('contact-form');
-
-    if (!form) return;
-
-    form.addEventListener('submit', function () {
-      if (typeof gtag === 'function') {
-        gtag('event', 'contact_form_submission', {
-          page_location: window.location.href,
-          form_name: 'main_contact_form'
-        });
-      }
-    });
-  });
-
-</script>
-  
   <title>Contact | Swar Sawalkar</title>
+
+  <!-- Google tag (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SM5QPL5LF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8SM5QPL5LF');
+  </script>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome Icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
@@ -120,8 +31,10 @@ const form = document.getElementById('contact-form');
     <img src="assets/tanpura.png" alt="Swar Sawalkar" class="header-profile">
     <span class="logo-text">SWAR SAWALKAR</span>
   </div>
-   <button id="menu-btn" class="menu-btn" aria-label="Toggle menu">☰</button>
-<nav id="nav-menu">
+
+  <button id="menu-btn" class="menu-btn" aria-label="Toggle menu">☰</button>
+
+  <nav id="nav-menu">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="achievements.html">Achievements</a>
@@ -134,85 +47,112 @@ const form = document.getElementById('contact-form');
 <section class="section">
   <h2>Contact Me</h2>
 
+  <!-- CONTACT FORM -->
+  <form id="contact-form" action="https://formspree.io/f/meoydrpz" method="POST">
 
-<!-- Contact Form (Formspree) -->
-<form id="contact-form" action="https://formspree.io/f/meoydrpz" method="POST">
+    <!-- Honeypot -->
+    <input type="text" name="_gotcha" style="display:none">
 
+    <!-- Hidden fields -->
+    <input type="hidden" name="submitted_at" id="submitted_at">
+    <input type="hidden" name="user_timezone" id="user_timezone">
 
-  <!-- Honeypot field to reduce spam -->
-  <input type="text" name="_gotcha" id="_gotcha" style="display:none" autocomplete="off">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
 
-  <!-- Hidden timestamp -->
-  <input type="hidden" name="submitted_at" id="submitted_at">
+    <input type="hidden" name="_subject" value="New Contact Form Submission">
 
-  <input id="name" name="name" type="text" placeholder="Your Name" required>
-  <input id="email" name="email" type="email" placeholder="Email Address" required>
-  <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit" id="submit-btn">Send Message</button>
+  </form>
 
-  <input type="hidden" name="_subject" value="New contact form submission">
-<button type="submit" id="submit-btn">Send Message</button>
-
-
-
-</form>
-
-<p id="form-status" style="margin-top: 12px; font-weight: 600;"></p>
-
-
+  <p id="form-status" style="margin-top:12px;font-weight:600;"></p>
 
   <h3>Direct Contact</h3>
   <div class="contact-details">
-    <p>
-      <strong>📍 Address:</strong> Mumbai, India
-    </p>
-    <p>
-      <strong>📧 Email:</strong><br>
+    <p><strong>📍 Address:</strong> Mumbai, India</p>
+    <p><strong>📧 Email:</strong><br>
       <a href="mailto:sawalkarswar@gmail.com">sawalkarswar@gmail.com</a>
     </p>
-    <p>
-      <strong>📞 Phone:</strong><br>
+    <p><strong>📞 Phone:</strong><br>
       <a href="tel:+919326048003">+91 93260 48003</a>
     </p>
   </div>
 
   <h3>Connect with Me</h3>
   <div class="social-links">
-    <a href="https://www.youtube.com/@swarsawalkar6283" target="_blank" rel="noopener">
-      <i class="fab fa-youtube"></i> <span>YouTube</span>
+    <a href="https://www.youtube.com/@swarsawalkar6283" target="_blank">
+      <i class="fab fa-youtube"></i> YouTube
     </a>
-    <a href="https://www.instagram.com/swar_sawalkar" target="_blank" rel="noopener">
-      <i class="fab fa-instagram"></i> <span>Instagram (swar_sawalkar)</span>
+    <a href="https://www.instagram.com/swar_sawalkar" target="_blank">
+      <i class="fab fa-instagram"></i> Instagram
     </a>
-    <a href="https://www.instagram.com/sawalkarswar" target="_blank" rel="noopener">
-      <i class="fab fa-instagram"></i> <span>Instagram (sawalkarswar)</span>
-    </a>
-    <a href="https://www.linkedin.com/in/swar-sawalkar-a7962a33a/" target="_blank" rel="noopener">
-      <i class="fab fa-linkedin"></i> <span>LinkedIn</span>
+    <a href="https://www.linkedin.com/in/swar-sawalkar-a7962a33a/" target="_blank">
+      <i class="fab fa-linkedin"></i> LinkedIn
     </a>
   </div>
 
-  <!-- DOWNLOAD RESUME PANEL -->
-<div class="resume-download">
-  <a href="assets/Swar-Sawalkar-Biodata.pdf" download>
-    <i class="fa-solid fa-file-arrow-down"></i>
-    <span>Download My Biodata</span>
-  </a>
-</div>
+  <div class="resume-download">
+    <a href="assets/Swar-Sawalkar-Biodata.pdf" download>
+      <i class="fa-solid fa-file-arrow-down"></i> Download My Biodata
+    </a>
+  </div>
 </section>
 
 <footer class="site-footer">
-  <div class="footer-content">
-   <p>© 2025 Swar Sawalkar — Indian Classical Vocalist & Voice-Over Artist 🎤</p>
-
-    <p class="footer-desc">
-      Passionate about Indian classical music, voice-over artistry, and continuous learning.  
-      Sharing my journey, performances, and experiences with the world.
-    </p>
-  </div>
+  <p>© 2025 Swar Sawalkar — Indian Classical Vocalist & Voice-Over Artist 🎤</p>
 </footer>
 
+<!-- ✅ FORM + GA LOGIC (ONLY PLACE FOR JS) -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
 
-<!-- JS -->
+  // Time & timezone
+  const now = new Date();
+  document.getElementById('submitted_at').value =
+    now.toLocaleString(undefined, { dateStyle: 'full', timeStyle: 'medium' });
+  document.getElementById('user_timezone').value =
+    Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+  const btn = document.getElementById('submit-btn');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    // 🔔 Google Analytics Event
+    if (typeof gtag === 'function') {
+      gtag('event', 'contact_form_submission', {
+        page_location: window.location.href,
+        form_name: 'main_contact_form'
+      });
+    }
+
+    btn.disabled = true;
+    btn.innerText = "Sending...";
+
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { "Accept": "application/json" }
+    });
+
+    if (response.ok) {
+      status.innerText = "✅ Thank you! Your message has been sent.";
+      status.style.color = "#22c55e";
+      form.reset();
+    } else {
+      status.innerText = "❌ Something went wrong. Please try again.";
+      status.style.color = "#ef4444";
+    }
+
+    btn.innerText = "Send Message";
+    btn.disabled = false;
+  });
+});
+</script>
+
 <script src="script.js"></script>
 </body>
 </html>
